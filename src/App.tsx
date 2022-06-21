@@ -42,6 +42,12 @@ function App() {
     }, 1000);
   }
 
+  // ======================== step3 callback ========================
+  const replay = () => {
+    setStep(0)
+    setPatientData([])
+  }
+
   return (
     <div className="w-full h-full p-10">
       <Steps type="basic" current={step}>
@@ -50,7 +56,7 @@ function App() {
         <Steps.Step title="Output" />
       </Steps>
       <div className="p-2 pt-10">
-        {[<UploadData callback={onGotData} />, <Calculating />, <Output data={patientData} />][step]}
+        {[<UploadData callback={onGotData} />, <Calculating />, <Output data={patientData} replay={replay} />][step]}
       </div>
     </div>
   )
