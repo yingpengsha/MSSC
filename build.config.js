@@ -4,7 +4,7 @@
  */
 const options = {
   config: {
-    productName: 'electron-vite',
+    productName: 'MSSC',
     appId: 'com.example.yourapp',
     directories: {
       output: 'build'
