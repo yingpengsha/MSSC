@@ -29,12 +29,12 @@ function App() {
       const element = patientData[i];
       Object.assign(element, CalculateMSS(element))
       if (element.metsZBMI) {
-        element.metsZBMI = +(element.metsZBMI * 100).toFixed(3)
-        element.metsZBMIBody = +Percentile(element.metsZBMI).toFixed(2)
+        element.metsZBMI = +(element.metsZBMI).toFixed(3)
+        element.metsZBMIBody = +Percentile(element.metsZBMI).toFixed(3)
       }
       if (element.metsZWC) {
-        element.metsZWC = +(element.metsZWC * 100).toFixed(3)
-        element.metsZWCBody = +Percentile(element.metsZWC).toFixed(2)
+        element.metsZWC = +(element.metsZWC).toFixed(3)
+        element.metsZWCBody = +Percentile(element.metsZWC).toFixed(3)
       }
     }
     setTimeout(() => {

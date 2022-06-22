@@ -35,7 +35,7 @@ const UploadData: React.FC<Props> = (props) => {
       const element = result[i];
       element['bmi'] = +BMIAdult(element['_weight'], element['_height']).toFixed(3)
       element['bmiZScore'] = +BMIZscore(element['_weight'], element['_height'], element['sex'], element['age']).toFixed(3)
-      element['bmiZBody'] = +Percentile(element.bmi).toFixed(2)
+      element['bmiZBody'] = +Percentile(element.bmi).toFixed(3)
     }
 
     props.callback(result)
